@@ -1,0 +1,273 @@
+html {
+    scroll-behavior: smooth;
+  }  
+
+/* font styles */
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: 200;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: freight-big-pro, serif;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.subHeading {
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 200;
+}
+
+h3 {
+    font-family: freight-big-pro, serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#mydiv a {
+    text-decoration: none;
+    color: #000000;
+    transition-duration: 0.4s;
+}
+
+#mydiv a:hover {
+    background-color: #FFFCC9;
+}
+
+/* navigation */
+
+#navBar {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5%;
+  }
+
+#navBar img {
+   padding: 50px;
+  }
+
+#navigation {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+#navigation p {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+#mydiv {
+    position: fixed;
+    z-index: 9;
+    right: 120px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    width: 175px;
+}
+  
+#mydivheader {
+    padding: 5px;
+    cursor: move;
+    z-index: 10;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+}
+
+#mydiv p {
+    padding: 0px 20px;
+    line-height: 18px;
+}
+
+/* projects */
+
+header, section {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+section.project1 {
+    background-color: #63798E; 
+    color: white; 
+}
+
+section.project2 {
+    background-color: #E2E6B6;
+}
+
+section.project3 {
+    background-color: #F7F6E7;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+section:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+section div {
+    width: 50%;
+}
+
+section div.text {
+    padding: 60px;
+}
+
+section div.full-image {
+    height: 100vh;
+    background-image: url("../images/bookbar.png");
+    background-size: cover;
+    background-position: center;
+}
+
+section div.image-2 {
+    background-image: url("../images/studentaid.png");
+}
+
+section div.image-3 {
+    background-image: url("../images/concierge.png");
+}
+
+.viewMore {
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    justify-self: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 20px;
+    margin: 10px 6px;
+    transition-duration: 0.4s;
+    display: inline-block;
+}
+
+.viewMore span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+}
+  
+.viewMore span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
+}
+  
+.viewMore:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.viewMore:hover span {
+    padding-right: 25px;
+}
+
+/* footer */
+
+#footer {
+    display: grid;
+    position: relative;
+    height: 150px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: black;
+    justify-content: center;
+    grid-template-areas:
+    "connect buttons"
+    "copyright copyright";
+}
+
+.connect {
+    color: #ffffff;
+    grid-area: connect;
+    align-self: center;
+}
+
+.buttons {
+    grid-area: buttons;
+    align-self: center;
+}
+
+.copyright {
+    align-self: end;
+    justify-self: center;
+    grid-area: copyright;
+    color: #ffffff;
+}
+
+.footerButton {
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 20px;
+    margin: 10px 6px;
+    transition-duration: 0.4s;
+  }
+
+.footerButton:hover {
+    background-color: #FFFCC9;
+    color: #000000;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    /* header {
+        height: 70vw;
+    } */
+
+    section {
+        display: block;
+    }
+
+    section div {
+        width: 100%;
+    }
+
+    section div.text {
+        padding: 30px;
+    }
+
+    section div.full-image {
+        width: 100vw;
+    }
+
+    #footer {
+        grid-template-areas:
+        "connect"
+        "buttons"
+        "copyright";
+    }
+  }

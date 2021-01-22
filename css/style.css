@@ -1,0 +1,266 @@
+html {
+    scroll-behavior: smooth;
+  }  
+
+/* font styles */
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: 200;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: freight-big-pro, serif;
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.subHeading {
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 200;
+}
+
+h3 {
+    font-family: freight-big-pro, serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#mydiv a {
+    text-decoration: none;
+    color: #000000;
+    transition-duration: 0.4s;
+}
+
+#mydiv a:hover {
+    background-color: #FFFCC9;
+}
+
+/* navigation */
+
+#navBar {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5%;
+  }
+
+#navBar img {
+   padding: 50px;
+  }
+
+#navigation {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+#navigation p {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+#mydiv {
+    position: fixed;
+    z-index: 9;
+    right: 120px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    width: 175px;
+}
+  
+#mydivheader {
+    padding: 5px;
+    cursor: move;
+    z-index: 10;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+}
+
+#mydiv p {
+    padding: 0px 20px;
+    line-height: 18px;
+}
+
+/* projects */
+
+
+
+/* about */
+
+.aboutMe-img {
+    background-color: #eeeeee;
+    margin: 10px;
+    padding: 10px;
+    grid-area: aboutMe-img;
+}
+
+.aboutMe {
+    margin: 10px;
+    padding: 10px;
+    grid-area: aboutMe;
+}
+
+.resumeButton {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    grid-area: resumeButton;
+}
+
+.aboutMe-grid {
+    display: grid;
+    margin: 0 10%;
+    justify-content: center;
+    grid-template-areas:
+    "aboutMe-img aboutMe"
+    "resumeButton aboutMe";
+}
+
+/* skills */
+
+.skillsGrid {
+    display: flex;
+    flex-direction: row;
+    margin: 0 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.skill1, .skill2, .skill3, .skill4 {
+    border-radius: 20%;
+    padding: 20px;
+    width: 300px;
+}
+
+.skill1 {
+    background-color: #959684;
+    color: white;
+    transform: rotate(-20deg);
+}
+
+.skill2 {
+    background-color: #E2E6B6;
+    transform: rotate(10deg);
+}
+
+.skill3 {
+    background-color: #63798E;
+    color: white;
+    transform: rotate(-10deg);
+}
+
+.skill4 {
+    background-color: #F7F6E7;
+    transform: rotate(20deg);
+}
+
+.skills {
+    list-style: none;
+}
+
+/* footer */
+
+.footer {
+    display: grid;
+    height: 150px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: black;
+    justify-content: center;
+    grid-template-areas:
+    "connect buttons"
+    "copyright copyright";
+}
+
+.connect {
+    color: #ffffff;
+    grid-area: connect;
+    align-self: center;
+}
+
+.buttons {
+    grid-area: buttons;
+    align-self: center;
+}
+
+.copyright {
+    align-self: end;
+    justify-self: center;
+    grid-area: copyright;
+    color: #ffffff;
+}
+
+.button {
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 20px;
+    margin: 10px 6px;
+    transition-duration: 0.4s;
+  }
+
+.button:hover {
+    background-color: #E2E6B6;
+    color: #000000;
+    border: 1px solid #E2E6B6;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .aboutMe-grid {
+        grid-template-areas:
+        "aboutMe-img"
+        "aboutMe"
+        "resumeButton";
+    }
+
+    .aboutMe-img {
+        margin: 10px;
+        justify-self: center;
+        padding: 10px;
+    }
+
+    .aboutMe, .resumeButton {
+        margin: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .skillsGrid {
+        flex-direction: column;
+    }
+
+    .skill1, .skill2, .skill3, .skill4 {
+        width: 200px;
+    }
+    
+ 
+
+    .footer {
+        grid-template-areas:
+        "connect"
+        "buttons"
+        "copyright";
+    }
+    
+  }

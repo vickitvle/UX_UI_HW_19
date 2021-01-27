@@ -67,8 +67,6 @@ function randomSlotttIndex(max) {
   return (randIndex > 6) ? randIndex : randomSlotttIndex(max);
 }
 
-  
-  
 function animate() {
   var wordIndex = randomSlotttIndex(wordlist.length);
   $wordbox.animate({top: -wordIndex*150}, 500, 'swing', function () {
@@ -85,3 +83,4 @@ $(function () {
   
   setInterval(animate, 2000);
 });
+

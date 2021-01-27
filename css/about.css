@@ -149,59 +149,16 @@ ul {
 }
 
 .aboutMe-grid {
-    height: 80vh;
     width: 90vw;
     border: 1px solid #87847b;
     background: #edeae4;
     display: grid;
-    margin: 0 auto;
+    margin: 0px auto 50px auto;
+    padding-bottom: 50px;
     justify-content: center;
     grid-template-areas:
     "aboutMe-img aboutMe"
     "resumeButton aboutMe";
-}
-
-/* skills */
-
-.skillsGrid {
-    display: flex;
-    flex-direction: row;
-    margin: 0 10%;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-}
-
-.skill1, .skill2, .skill3, .skill4 {
-    border-radius: 20%;
-    padding: 20px 30px 30px 30px;
-    width: 300px;
-}
-
-.skill1 {
-    background-color: #959684;
-    color: white;
-    transform: rotate(-20deg);
-}
-
-.skill2 {
-    background-color: #E2E6B6;
-    transform: rotate(10deg);
-}
-
-.skill3 {
-    background-color: #63798E;
-    color: white;
-    transform: rotate(-10deg);
-}
-
-.skill4 {
-    background-color: #F7F6E7;
-    transform: rotate(20deg);
-}
-
-.skills {
-    list-style: none;
 }
 
 /* Footer */
@@ -258,6 +215,32 @@ ul {
 }
 
 @media only screen and (max-width: 600px) {
+#navBar {
+    align-items: center;
+}
+
+#navBar img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 0;
+    left: 50%;
+}
+
+#navigation p {
+    display: none;
+}
+
+#mydiv {
+    display: block;
+    bottom: 10px;
+    right: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 50%;
+    border: 1px solid white;
+}
+
 .aboutMe-grid {
     grid-template-areas:
     "aboutMe-img"
@@ -274,15 +257,7 @@ ul {
 .aboutMe, .resumeButton {
     margin: 10px;
     padding: 10px;
-    width: 100%;
-}
-
-.skillsGrid {
-    flex-direction: column;
-}
-
-.skill1, .skill2, .skill3, .skill4 {
-    width: 200px;
+    width: 80vw;
 }
 
 .footer {

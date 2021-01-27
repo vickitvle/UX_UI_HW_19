@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-  }  
+}
 
 /* font styles */
 
@@ -10,6 +10,7 @@ body {
     line-height: 22px;
     font-weight: 200;
     margin: 0 auto;
+    background-color: #b5b1a7;
 }
 
 h1 {
@@ -20,17 +21,6 @@ h1 {
     font-style: normal;
 }
 
-.subHeading {
-    border-bottom: 1px solid black;
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 10px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 16px;
-    line-height: 26px;
-    font-weight: 200;
-}
-
 h3 {
     font-family: freight-big-pro, serif;
     font-size: 22px;
@@ -38,68 +28,105 @@ h3 {
     font-style: normal;
 }
 
-#mydiv a {
+.button a {
+    color: white;
     text-decoration: none;
-    color: #000000;
-    transition-duration: 0.4s;
 }
 
-#mydiv a:hover {
-    background-color: #FFFCC9;
+.button a:hover {
+    color: black;
 }
 
-/* navigation */
+/* Navigation */
 
 #navBar {
     display: flex;
     flex-direction: row;
-    margin: 0px 5%;
+    margin: 0 5%;
+    height: calc(25vh - 50px);
   }
 
 #navBar img {
-   padding: 50px;
-  }
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -40px;
+}
 
 #navigation {
     display: flex;
-    width: 50%;
+    width: 100%;
     align-items: center;
-    justify-content: space-evenly;
-  }
+    justify-content: flex-end;
+}
 
 #navigation p {
-    cursor: pointer;
+    margin: 0px 10px 0px 50px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
     text-decoration: none;
-  }
+    text-align: center;
+    border-radius: 50%;
+    transition: ease 0.3s;
+}
+
+#navigation a {
+    color: black;
+    text-decoration: none;
+}
+
+#navigation p:hover {
+    cursor: pointer;
+    background: #FFFCC9;
+}
 
 #mydiv {
     position: fixed;
-    z-index: 9;
-    right: 120px;
+    right: 0px;
+    z-index: 1;
+    margin: 10px;
     background-color: #ffffff;
     border: 1px solid #000000;
-    width: 175px;
+    width: 200px;
+    display: none;
 }
-  
+
 #mydivheader {
     padding: 5px;
-    cursor: move;
-    z-index: 10;
-    background-color: #000000;
+    cursor: pointer;
+    background: #000000;
     color: #fff;
     text-align: center;
 }
 
-#mydiv p {
-    padding: 0px 20px;
-    line-height: 18px;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* projects */
+.item {
+  margin: 15px;
+  padding-left: 20px;
+  transition: ease 0.3s;
+}
 
+.item a {
+    color: black;
+    text-decoration: none;
+}
 
+.item:hover {
+    background: #FFFCC9;
+    cursor: pointer;
+}
 
-/* about */
+#dropDown {
+  display: none;
+}
+
+/* About */
 
 .aboutMe-img {
     background-color: #eeeeee;
@@ -122,8 +149,12 @@ h3 {
 }
 
 .aboutMe-grid {
+    height: 80vh;
+    width: 90vw;
+    border: 1px solid #87847b;
+    background: #edeae4;
     display: grid;
-    margin: 0 10%;
+    margin: 0 auto;
     justify-content: center;
     grid-template-areas:
     "aboutMe-img aboutMe"
@@ -143,7 +174,7 @@ h3 {
 
 .skill1, .skill2, .skill3, .skill4 {
     border-radius: 20%;
-    padding: 20px;
+    padding: 20px 30px 30px 30px;
     width: 300px;
 }
 
@@ -173,11 +204,12 @@ h3 {
     list-style: none;
 }
 
-/* footer */
+/* Footer */
 
 .footer {
     display: grid;
-    height: 150px;
+    position: relative;
+    height: 100px;
     padding: 20px;
     margin: 0 auto;
     background-color: black;
@@ -205,62 +237,59 @@ h3 {
     color: #ffffff;
 }
 
-.button {
+.footerButton, .button {
     border: 1px solid #ffffff;
     background-color: #000000;
     color: white;
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     font-family: 'Roboto Mono', monospace;
     border-radius: 20px;
     margin: 10px 6px;
     transition-duration: 0.4s;
-  }
+}
 
-.button:hover {
-    background-color: #E2E6B6;
+.footerButton:hover, .button:hover {
+    background-color: #FFFCC9;
     color: #000000;
-    border: 1px solid #E2E6B6;
     cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
-    .aboutMe-grid {
-        grid-template-areas:
-        "aboutMe-img"
-        "aboutMe"
-        "resumeButton";
-    }
+.aboutMe-grid {
+    grid-template-areas:
+    "aboutMe-img"
+    "aboutMe"
+    "resumeButton";
+}
 
-    .aboutMe-img {
-        margin: 10px;
-        justify-self: center;
-        padding: 10px;
-    }
+.aboutMe-img {
+    margin: 10px;
+    justify-self: center;
+    padding: 10px;
+}
 
-    .aboutMe, .resumeButton {
-        margin: 10px;
-        padding: 10px;
-        width: 100%;
-    }
+.aboutMe, .resumeButton {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
 
-    .skillsGrid {
-        flex-direction: column;
-    }
+.skillsGrid {
+    flex-direction: column;
+}
 
-    .skill1, .skill2, .skill3, .skill4 {
-        width: 200px;
-    }
-    
- 
+.skill1, .skill2, .skill3, .skill4 {
+    width: 200px;
+}
 
-    .footer {
-        grid-template-areas:
-        "connect"
-        "buttons"
-        "copyright";
-    }
-    
+.footer {
+    height: 25%;
+    grid-template-areas:
+    "connect"
+    "buttons"
+    "copyright";
+}
   }

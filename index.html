@@ -1,137 +1,165 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <link href="index.js">
-  <link rel="stylesheet" href="https://use.typekit.net/tha8uyd.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&display=swap" rel="stylesheet">
-  <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" href="https://use.typekit.net/tha8uyd.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&display=swap" rel="stylesheet">
+    
+    <title>Home</title>
 </head>
 <body>
-  
-  <!-- nav -->
 
-  <nav id="navBar">
-    <a href="home.html"><img src="images/logo.png" height="75px" width="100px" alt="Vicki Le"></a>
-    <div id="navigation">
-      <div id="mydiv">
-        <div id="mydivheader">TABLE OF CONTENTS /</div>
-        <p><a href="home.html">01. WORK</p></a>
-        <p>02. PLAY</p>
-        <p><a href="index.html">03. ABOUT</a></p>
+<!-- Navigation -->
+
+<nav id="navBar">
+  <a href="index.html"><img src="images/logo2.png"></a>
+  <div id="navigation">
+    <p><a href="#projectsText">WORK</a></p>
+    <p>JOURNAL</p>
+    <p><a href="about.html">ABOUT</a></p>
+  </div>
+
+  <div id="mydiv">
+    <div id="mydivheader">TABLE OF CONTENTS +</div>
+      <ul id="dropDown">
+        <li>01. BOOKBAR CASE STUDY</li>
+        <li>02. STUDENTAID.GOV REDESIGN CASE STUDY</li>
+        <li>03. CONCIERGE CASE STUDY</li>
+        <li>04. JOURNAL</li>
+        <li><a href="index.html">05. ABOUT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+
+<section>
+  <div class="heroText">
+    <div class="text1">
+      <h1>Vicki Le is </h1>
+    </div>
+
+    <a href="about.html"><div class="slottt-machine-recipe">
+      <div class="slottt-machine-recipe__mask" id="wordbox">
+          <div class="slottt-machine-recipe__items_container recipe_if"></div>
       </div>
+    </a>
     </div>
-  </nav>
 
-  <!-- about -->
-
-  <div class="subHeading">ABOUT ME /</div>
-
-  <section class="aboutMe-grid">
-    <div class="aboutMe-img">
-      <img src="images/self.png" height="300px" width="250px" alt="Vicki Le">
+    <div class="text2">
+      <h1>based in Manhattan, NY.</h1>
     </div>
-    <div class="resumeButton">
-      <button class="button">RESUME</button>
-    </div>
-    <div class="aboutMe">
-      <p><b>Q: Who are you?</b>
-        <br>
-      My name's Vicki Le, and I'm a UX designer with a background in sociology and making a mean iced latte (or a nice hot one).
-        <br><br>
-      <b>Q: What does that have to do with UX?</b>
-        <br>
-      After graduating from UF with a B.A. in Sociology and spending 3 subsequent years as a barista, I've discovered that connecting with people and learning about what brings them joy, what frustrates them, and how I can help them basically defines my existence. Intertwining my interests in visual design and connecting with others led me to UX/UI design, where I hope to create meaningful experiences with people for people.
-        <br><br>
-      <b>Q: What do you do?</b>
-        <br>
-      From user research to high-fidelity prototypes and iterative designs, I'm continuously learning about the world of UX/UI and the multitude of ways it can alleviate the challenges of everyday life not just for myself, but for everyone.
-        <br><br>
-      <b>Q: What do you look for?</b>
-        <br>
-      I thrive in collaborative and creatively driven environments where I can connect with people who share mutual interests and respect one another. Continuing to grow, learn, and using the skills I've learned to positively impact those around me and beyond the screen would be the ultimate achievement.
+  </div>
+</section>
+
+<!-- Projects -->
+
+<header>
+  <div id="projectsText">
+    <h3><a href="#project1">PROJECTS <i class="fa fa-long-arrow-down" aria-hidden="true"></i></a></h3>
+  </div>
+</header>
+
+<div id="scrollText"><h3>SCROLL <i class="fa fa-long-arrow-down" aria-hidden="true"></i></h3></div>
+
+<section id="project1">
+  <div class="text">
+    <p>( 01 / 03 )</p>
+    <h1><i>Bookbar</i>: A Social Media App for Public Libraries</h1>
+    <p><b>GOAL /</b>
+    <br>
+    Design, prototype, and test a mobile app dedicated to increasing public library engagement based on the needs of college students and graduates.
+    <br><br>
+    <b>ROLE /</b>
+    <br>
+    UX Designer (student / group)
+    <br><br>
+    <b>TIMELINE /</b>
+    <br>
+    2 weeks
     </p>
-    </div>
-    </section>
+    <br>
+    <button class="viewMore" style="vertical-align:middle"><span>VIEW CASE STUDY</span></button>
+  </div>
 
+  <div class="full-image image-1"></div>
+</section>
 
-<!-- skills with CSS flex -->
+<section id="project2">
+  <div class="text">
+    <p>( 02 / 03 )</p>
+    <h1><i>Studentaid.gov</i>: A Responsive Web Redesign</h1>
+    <p><b>GOAL /</b>
+    <br>
+    Redesign studentaid.gov by creating consistent and appealing design solutions to facilitate efficient workflows that align with users’ mental models.
+    <br><br>
+    <b>ROLE /</b>
+    <br>
+    UX Designer (student)
+    <br><br>
+    <b>TIMELINE /</b>
+    <br>
+    3 weeks
+    </p>
+    <br>
+    <button class="viewMore" style="vertical-align:middle"><span>VIEW CASE STUDY</span></button>
+  </div>
 
-  <div class="subHeading">SKILLS /</div>
+  <div class="full-image image-2"></div>
+</section>
 
-  <section class="skillsGrid">
+<section id="project3">
+  <div class="text">
+    <p>( 03 / 03 )</p>
+    <h1><i>Concierge</i>: A Personalized Travel Planning App</h1>
+    <p><b>GOAL /</b>
+    <br>
+    Identify problems within the travel planning space and research, build, and test a mobile app solution backed by the Design Thinking Process.
+    <br><br>
+    <b>ROLE /</b>
+    <br>
+    UX Designer (student)
+    <br><br>
+    <b>TIMELINE /</b>
+    <br>
+    2 weeks
+    </p>
+    <br>
+    <button class="viewMore" style="vertical-align:middle"><span>VIEW CASE STUDY</span></button>
+  </div>
 
-    <div class="skill1">
-    <h3>User Research /</h3>
-      <ul class="skills">
-      <li>Competitive analysis</li>
-      <li>Heuristic evaluation</li>
-      <li>User interviews</li>
-      <li>Usability testing</li>
-    </ul>
-    </div>
+  <div class="full-image image-3"></div>
+</section>
 
-    <div class="skill2">
-      <h3>Design /</h3>
-      <ul class="skills">
-      <li>Information architecture</li>
-      <li>Journey mapping</li>
-      <li>Personas</li>
-      <li>Prototyping</li>
-      <li>Storyboarding</li>
-      <li>UX/UI design</li>
-      <li>Visual design</li>
-      <li>Wireframing</li>
-      <li>Web & mobile design</li>
-    </ul> 
-    </div>
+<!-- Footer -->
 
-    <div class="skill3">
-      <h3>Tools /</h3>
-      <ul class="skills">
-      <li><i>Adobe Creative Suite:</i></li>
-      <li>Adobe XD</li>
-      <li>Lightroom</li>
-      <li>Photoshop</li>
-      <li>InDesign</li>
-      <li>Premiere</li>
-      <li>/</li>
-      <li>Figma</li>
-      <li>InVision</li>
-    </ul> 
-    </div>
+<footer class="footer">
+  <div class="connect">
+    <p>LET'S CONNECT /</p>
+  </div>
 
-    <div class="skill4">
-      <h3>Development (WIP) /</h3>
-      <ul class="skills">
-      <li>HTML/CSS</li>
-      <li>Javascript</li>
-    </ul> 
-    </div>
-  </section>
+  <div class="buttons">
+    <button class="footerButton">EMAIL</button>
+    <button class="footerButton">LINKEDIN</button>
+  </div>
 
-<!-- footer -->
+  <div class="copyright">
+    <p>© 2021. VICKI LE. ALL RIGHTS RESERVED.</p>
+  </div>
+</footer>
 
-  <section class="footer">
-     <div class="connect">
-      LET'S CONNECT /
-     </div>
-     <div class="buttons">
-      <button class="button">EMAIL</button>
-      <button class="button">LINKEDIN</button>
-      <button class="button">INSTAGRAM</button>
-    </div>
-    <div class="copyright">
-      <p>© 2021. VICKI LE. ALL RIGHTS RESERVED.</p>
-    </div>
-  </section>
+<!-- Script -->
 
-  <!-- movable nav -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/index.js"></script>
+<script src="js/index.js"></script>
+<script src="https://use.fontawesome.com/a7e3839d21.js"></script>
 
 </body>
 </html>
